@@ -47,6 +47,7 @@ public class RozetkaTest {
         String result = mainPage.getNameField();
         Assert.assertEquals("result = ", "Вася Пупкин" , result);
 
+
         driver.quit();
     }
 
