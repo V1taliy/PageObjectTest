@@ -8,7 +8,8 @@ public class Registration {
     private WebDriver driver;
     public Composition composition;
 
-    public Registration(WebDriver driver) {
+    public Registration(WebDriver driver)
+    {
         this.driver = driver;
     }
 

@@ -21,6 +21,11 @@ public class SearchResultPage {
         return driver.findElement(By.cssSelector(".search-result-title-text")).getText();
     }
 
+    public String getProductInBasket(String locator) {
+
+        return driver.findElement(By.xpath(locator)).getText();
+
+
    /* public WebElement setSearchElement(String type, By by) {
         WebElement element = null;
         switch (type) {
@@ -45,4 +50,5 @@ public class SearchResultPage {
         }
         return element;
     }*/
+    }
 }

@@ -10,11 +10,13 @@ public class Composition {
     public MainPage mainPage;
     public SearchResultPage searchResultPage;
     public Registration registration;
+    public AddProductInBasket addProductInBasket;
 
     public Composition(WebDriver driver){
         mainPage = new MainPage(driver);
         searchResultPage = new SearchResultPage(driver);
         registration = new Registration(driver);
+        addProductInBasket = new AddProductInBasket(driver);
     }
 
 }
