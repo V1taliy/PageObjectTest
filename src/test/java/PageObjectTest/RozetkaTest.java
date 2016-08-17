@@ -1,12 +1,9 @@
 package PageObjectTest;
 
 import org.junit.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class RozetkaTest {
@@ -43,7 +40,8 @@ public class RozetkaTest {
 
     @Test
     public void findProductInBasket() {
-
+        AddProductInBasket addProductInBasket = new AddProductInBasket(driver);
+        addProductInBasket.clickAndAddProduct();
         String product1 = searchResultPage.getProductInBasket(".//div[@id='cart-popup']//a[contains(text(), 'Meizu M3 Note 16GB Grey')]");
         String product2 = searchResultPage.getProductInBasket(".//div[@id='cart-popup']//a[contains(text(), 'Meizu M3 Note 16GB Silver')]");
         String product3 = searchResultPage.getProductInBasket(".//div[@id='cart-popup']//a[contains(text(), 'Meizu M3 2/16GB White')]");
